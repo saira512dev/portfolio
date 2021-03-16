@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -45,7 +45,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden;
 
   &.show {
@@ -71,6 +70,7 @@
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
+    background: rgba(darken($primary-color, 5), 0.9);
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -81,6 +81,7 @@
     background: $primary-color;
     transform: translate3d(0, 100%, 0);
     @include easeOut;
+    background: rgba($primary-color, 0.9);
 
     &.show {
       transform: translate3d(0, 0, 0);
@@ -89,7 +90,8 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url("..img/logo.jpg");
+      background: url(../img/portrait.jpeg);
+      background-size: cover;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
@@ -114,7 +116,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
