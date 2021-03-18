@@ -61,3 +61,15 @@ $background-opacity: 0.9;
     @content;
   }
 }
+
+@mixin mediaLandscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin mediaPortrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}

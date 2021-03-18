@@ -1,5 +1,10 @@
 //widescreens
 @include mediaXl {
+  main#home {
+    height: 100vh;
+    width: 100%;
+    min-height: 100%;
+  }
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -7,22 +12,81 @@
 
 //Desktops & Laptops
 @include mediaLg {
+  main#home {
+    width: 100%;
+    min-height: 100%;
+  }
   .projects {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
+@include mediaLandscape {
+  main {
+    .lg-heading {
+      font-size: 3.5rem;
+    }
+
+    &#home {
+      margin-top: 5vh;
+      height: 100%;
+      width: 100%;
+      min-height: 100%;
+      padding: 1rem;
+    }
+  }
+}
+
+// @include mediaPortrait {
+//   body {
+//     height: 100vh;
+//     width: 100%;
+//   }
+//   main#home {
+//     height: 100vh;
+//     width: 100%;
+//     min-height: 100%;
+//   }
+//   .about-info {
+//     grid-template-areas:
+//       "bioimage"
+//       "bio"
+//       "job1"
+//       "job2"
+//       "job3";
+
+//     grid-template-columns: 1fr;
+//   }
+
+//   .projects {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .boxes {
+//     display: flex;
+//     flex-wrap: wrap;
+//     flex-direction: column;
+//   }
+// }
+
 //Tablets & Small Laptops
 @include mediaMd {
   main {
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-
     .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+    }
+
+    &#home {
+      margin-top: 15vh;
+      height: 100%;
+      width: 100%;
+      min-height: 100%;
+      padding: 1rem;
+
+      .lg-heading {
+        line-height: 1;
+        font-size: 4rem;
+      }
     }
   }
 
@@ -38,19 +102,38 @@
   }
 
   .menu-nav {
-    height: 75vh;
+    height: 60vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
   }
 
   .menu-branding {
-    height: 25vh;
+    height: 40vh;
     transform: translate3d(100%, 0, 0);
+    padding: 1px;
 
-    .portrait {
-      background: url("../img/portrait_small.jpg");
-      width: 150px;
-      height: 150px;
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      div {
+        font-size: 1rem;
+        flex: auto auto auto;
+        border: 2px #fff solid;
+        padding: 2px 2px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-right: 1x;
+        margin-left: 4px;
+        @include easeOut;
+        background: darken($primary-color, 5);
+      }
+
+      &.contact-title {
+        font-size: 24px;
+      }
     }
   }
 
@@ -74,20 +157,24 @@
 @include mediaSm {
   main#home {
     margin-top: 10vh;
-  }
+    min-height: 100%;
+    padding: 1rem;
+    margin-bottom: none;
 
-  .about-info {
-    grid-template-areas:
-      "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
-
-    grid-template-columns: 1fr;
+    .lg-heading {
+      margin-top: 1rem;
+      font-size: 4rem;
+      //text-align: left;
+    }
   }
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }

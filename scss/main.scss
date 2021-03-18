@@ -25,11 +25,14 @@ h3 {
 
   &.lg-heading {
     font-size: 6rem;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    padding: 1px 1px;
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
-    margin-left: 1rem;
+    margin-left: 1px;
     padding: 0.2rem, 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
   }
@@ -82,6 +85,10 @@ main {
   }
 
   &#work {
+    overflow: hidden;
+    background-color: $primary-color;
+  }
+  &#contact {
     overflow: hidden;
     background-color: $primary-color;
   }
