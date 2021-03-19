@@ -98,18 +98,18 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
+    "bio bio "
+    "job1 job2 ";
+  grid-template-columns: repeat(2, 1fr);
 
-  .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: $secondary-color 3px solid;
-  }
+  // .bio-image {
+  //   grid-area: bioimage;
+  //   margin: auto;
+  //   width: 250px;
+  //   height: 250px;
+  //   border-radius: 50%;
+  //   border: $secondary-color 3px solid;
+  // }
 
   .bio {
     grid-area: bio;
@@ -132,6 +132,11 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+  }
+
+  .skills {
+    background: darken($secondary-color, 10);
+    color: set-text-color($secondary-color);
   }
 }
 
