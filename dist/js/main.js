@@ -4,6 +4,9 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const navItems = document.querySelectorAll('.nav-item');
+// const projectItems = document.querySelectorAll('.item');
+// //console.log(projectItems);
+
 
 
 //set Initial State of menu
@@ -30,3 +33,13 @@ function toggleMenu () {
         showMenu = false;
     }
 }
+
+// projectItems.forEach(item =>  {     
+//     const currentLink = item.childNodes[1].childNodes[1];
+//     const currentImage = currentLink.childNodes[1];
+//     currentImage.addEventListener("mouseenter", function() {
+//         currentImage.classList.add('nowDescribe');
+//         setTimeout(function(){ currentImage.classList.remove('nowDescribe'); }, 6000);        
+//     });    
+// });
+

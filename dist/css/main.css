@@ -215,18 +215,45 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
   .about-info .skills {
-    background: #c6ab0f;
+    background: #f2d849;
     color: #000; }
 
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
+  .projects .project-text {
+    font-size: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    -webkit-transform: translate(-40%, -20%);
+    -ms-transform: translate(-40%, -20%);
+    transform: translate(-40%, -20%);
+    text-align: center;
+    transition: all 0.5s ease-out; }
+  .projects .project-description {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: #008cba; }
+  .projects .project-detail:hover .project-description {
+    opacity: 1;
+    transition: all 0.5s ease-out; }
   .projects img {
     width: 100%;
-    border: 3px #fff solid; }
+    display: block;
+    height: auto;
+    border: 3px #fff solid;
+    backface-visibility: hidden; }
     .projects img:hover {
-      opacity: 0.5;
+      opacity: 0.2;
       border-color: #eece1a;
       transition: all 0.5s ease-out; }
 
@@ -245,7 +272,8 @@ main {
 
 .btn-light {
   background: #c4c4c4;
-  color: #333; }
+  color: #333;
+  margin-top: 0.5rem; }
 
 #main-footer {
   text-align: center;
