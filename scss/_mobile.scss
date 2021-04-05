@@ -162,7 +162,10 @@
     .lg-heading {
       margin-top: 1rem;
       font-size: 4rem;
-      //text-align: left;
+      animation: typing 1.5s steps(12), blink 1.5s;
+      border-right: 0.15em solid transparent;
+      white-space: normal;
+      overflow: hidden;
     }
   }
 

@@ -24,10 +24,14 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
+    animation: typing 1.5s steps(12), blink 1.5s;
     font-size: 6rem;
+    border-right: 0.15em solid transparent;
     margin-left: 1px;
     margin-bottom: 1px;
-    padding: 1px 1px;
+    padding: 1px 1.5px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   &.sm-heading {
@@ -226,6 +230,25 @@ main {
   background-color: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  20% {
+    border-color: #fff;
+  }
 }
 
 @import "mobile";

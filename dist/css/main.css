@@ -146,10 +146,14 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
+    animation: typing 1.5s steps(12), blink 1.5s;
     font-size: 6rem;
+    border-right: 0.15em solid transparent;
     margin-left: 1px;
     margin-bottom: 1px;
-    padding: 1px 1px; }
+    padding: 1px 1.5px;
+    white-space: nowrap;
+    overflow: hidden; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -282,6 +286,19 @@ main {
   color: #fff;
   height: 60px; }
 
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent; }
+  20% {
+    border-color: #fff; } }
+
 @media screen and (min-width: 1171px) {
   main#home {
     height: 100vh;
@@ -367,7 +384,11 @@ main {
     margin-bottom: none; }
     main#home .lg-heading {
       margin-top: 1rem;
-      font-size: 4rem; }
+      font-size: 4rem;
+      animation: typing 1.5s steps(12), blink 1.5s;
+      border-right: 0.15em solid transparent;
+      white-space: normal;
+      overflow: hidden; }
   .projects {
     grid-template-columns: 1fr; }
   .boxes {
