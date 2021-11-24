@@ -61,7 +61,7 @@ main {
   padding: 4rem;
   height: 100%;
   width: 100%;
-  min-height: calc(100vh-60px);
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
@@ -150,17 +150,17 @@ main {
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
-  .project-text {
-    font-size: 20px;
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    -webkit-transform: translate(-40%, -20%);
-    -ms-transform: translate(-40%, -20%);
-    transform: translate(-40%, -20%);
-    text-align: center;
-    @include easeOut;
-  }
+  // .project-text {
+  //   font-size: 20px;
+  //   position: absolute;
+  //   bottom: 5px;
+  //   left: 50%;
+  //   -webkit-transform: translate(-40%, -20%);
+  //   -ms-transform: translate(-40%, -20%);
+  //   transform: translate(-40%, -20%);
+  //   text-align: center;
+  //   @include easeOut;
+  // }
 
   .project-description {
     position: relative;
